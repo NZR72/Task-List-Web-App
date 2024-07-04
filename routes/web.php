@@ -4,7 +4,7 @@ use Faker\Guesser\Name;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');# Main Page
+    return view('index', ['name' => 'Nizar']); # Main Page
 });
 
 Route::get("/hello", function () {
