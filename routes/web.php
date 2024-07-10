@@ -57,9 +57,13 @@ $tasks = [
   ),
 ];
 
-Route::get('/', function () use ($tasks) {
-    return view('index', ['name' => 'Nizar', "tasks" => $tasks]); # Main Page
+Route::get('/', function () {
+    return redirect(route('homepage'));
 }) -> Name("tasks.index");
+
+Route::get('/tasks',function () use ($tasks) {
+  return view('index', ['name' => 'Nizar', "tasks" => $tasks]); # Main Page
+}) -> Name("homepage");
 
 Route::get("/tasks/{id}", function($id) use ($tasks) {
   $task = collect($tasks) -> firstWhere("id", $id);

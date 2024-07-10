@@ -1,5 +1,9 @@
+@extends("layouts.app")
+
+@section("title", $task -> title)
+
+@section("content")
 <h1>
-    {{$task -> title}}
     @if ($task -> completed == false)
         <h3>Not Completed!</h3>
     
@@ -9,8 +13,15 @@
     @endif
 </h1>
 <div>
-    {{$task -> description}}
+    <p>{{$task -> description}}</p>
 </div>
 <div>
-    {{$task -> long_description}}
+    @if ($task -> long_description)
+        <p>{{$task -> long_description}}</p>
+    @endif
 </div>
+<div>
+    <p>{{$task -> created_at}}</p>
+    <p>{{$task -> updated_at}}</p>
+</div>
+@endsection
