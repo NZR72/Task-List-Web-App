@@ -14,6 +14,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // if(User::count()<20) {
+        //     User::factory(20 - User::count())->create();
+        // }
+        // if(Task::count()<20) {
+        //     Task::factory(20 - Task::count())->create();
+        // }
         User::factory(20)->create();
         Task::factory(20)->create();
         // User::factory()->create([
