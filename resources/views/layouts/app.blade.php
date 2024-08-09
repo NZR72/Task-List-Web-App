@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>laravel Title</title>
+    <title>Task List Web App</title>
     @yield("styles")
 </head>
 
